@@ -33,5 +33,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
-          postman login --with-api-key ${{API_KEY}}
+          postman login --with-api-key ${{secrets.API_KEY}}
           postman collection run "postman/collections/santa.json" -e "env.json"
